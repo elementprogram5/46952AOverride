@@ -10,8 +10,8 @@ pros::Optical optical(9);
 pros::Imu imu(17);
 pros::Rotation vertical_encoder(14);
 
-11,12,13 - Left Motor Group
-18,19,20 - Right Motor Group
+11,12 - Left Motor Group
+18,19 - Right Motor Group
 21 - Radio
 */
 
@@ -24,8 +24,8 @@ pros::Rotation vertical_encoder(14);
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 // Drivetrain motors
-pros::MotorGroup left_motors({-11, -12, -13}, pros::MotorGearset::blue);
-pros::MotorGroup right_motors({18, 19, 20}, pros::MotorGearset::blue);
+pros::MotorGroup left_motors({-11, -12}, pros::MotorGearset::blue);
+pros::MotorGroup right_motors({18, 19,}, pros::MotorGearset::blue);
 
 // LemLib drivetrain
 lemlib::Drivetrain drivetrain(

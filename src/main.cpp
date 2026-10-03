@@ -87,5 +87,24 @@ void opcontrol() {
         int rightY = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
         // move the robot
         chassis.tank(leftY, rightY);
+		if (controller.get_digital(DIGITAL_R1)) {
+			pros::lcd::print(0, "UP");
+			runLift(100);
+
+		}
+		else if (controller.get_digital(DIGITAL_R2)) {
+			pros::lcd::print(0, "DOWN");
+			runLift(-100);
+		}
+		else {
+            runLift(0);
+        }
+		if (controller.get_digital(DIGITAL_RIGHT)) {
+			runClaw(-180.0, 100);
+		}
+		else if (controller.get_digital(DIGITAL_DOWN)) {
+			runClaw(-20.0, 100);
+		}
+
 	}
 }
