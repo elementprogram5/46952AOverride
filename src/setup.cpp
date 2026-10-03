@@ -12,13 +12,21 @@ pros::Rotation vertical_encoder(14);
 
 11,12 - Left Motor Group
 18,19 - Right Motor Group
+7, 8 - Lift
+9 - Claw
 21 - Radio
 */
 
-// Sensora
-pros::Optical optical(9);
+// Sensors
+pros::AIVision aivision(2);
 pros::Imu imu(17);
 pros::Rotation vertical_encoder(14);
+
+// Lift
+pros::MotorGroup lift_motors({7, -8}, pros::MotorGearset::red);
+
+//Claw
+pros::MotorGroup claw_motors({9, -10}, pros::MotorGearset::ratio_18_to_1);
 
 // Controller
 pros::Controller controller(pros::E_CONTROLLER_MASTER);

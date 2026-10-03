@@ -4,12 +4,16 @@
 //#include "lemlib-tarball/api.hpp"
 
 // Sensors
-extern pros::Optical optical;
+extern pros::AIVision aivision;
 extern pros::Imu imu;
 extern pros::Rotation vertical_encoder;
 
 // Controller
 extern pros::Controller controller;
+
+//Motors
+extern pros::MotorGroup lift_motors;
+extern pros::MotorGroup claw_motors;
 
 // Drivetrain
 extern pros::MotorGroup left_motors;
