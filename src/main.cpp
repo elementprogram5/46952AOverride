@@ -89,11 +89,12 @@ void opcontrol() {
         chassis.tank(leftY, rightY);
 		if (controller.get_digital(DIGITAL_R1)) {
 			pros::lcd::print(0, "UP");
+			runClaw(-180.0, 100);
 			runLift(100);
-
 		}
 		else if (controller.get_digital(DIGITAL_R2)) {
 			pros::lcd::print(0, "DOWN");
+			runClaw(-180.0, 100);
 			runLift(-100);
 		}
 		else {
