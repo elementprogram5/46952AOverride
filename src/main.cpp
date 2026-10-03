@@ -1,5 +1,11 @@
 #include "main.h"
 #include "setup.hpp"
+#include "subsystems.hpp"
+
+//Auto File Declaration
+ASSET(my_lemlib_tarball_file_txt);
+
+int selectedAuton = 0;  // Global to track auto
 
 /**
  * A callback function for LLEMU's center button.
